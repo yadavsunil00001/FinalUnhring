@@ -1,0 +1,5 @@
+{
+   "directory": "public/lib",
+  "proxy":"http://ipg_2012084:rakeshPAPA@192.168.1.107:3128",
+  "https-proxy":"http://ipg_2012084:rakeshPAPA@192.168.1.107:3128"
+}

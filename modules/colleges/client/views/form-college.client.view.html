@@ -1,0 +1,33 @@
+<section>
+  <div class="page-header">
+    <h1>{{vm.college._id ? 'Edit College' : 'New College'}}</h1>
+  </div>
+  <div class="col-md-12">
+    <form name="vm.form.collegeForm" class="form-horizontal" ng-submit="vm.save(vm.form.collegeForm.$valid)" novalidate>
+      <fieldset>
+
+        <div class="form-group" show-errors>
+          <label class="control-label" for="name">College Name</label>
+          <input name="name" type="text" ng-model="vm.college.name" id="name" class="form-control" placeholder="Name" required>
+          <div ng-messages="vm.form.collegeForm.name.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">College name is required.</p>
+          </div>
+        </div>
+         <div class="form-group" show-errors>
+          <label class="control-label" for="name">College_degree</label>
+          <input name="name" type="text" ng-model="vm.college.degree" id="degree" class="form-control" placeholder="insert degree" required>
+          <div ng-messages="vm.form.collegeForm.name.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">College degree is required.</p>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-default">{{vm.college._id ? 'Update' : 'Create'}}</button>
+        </div>
+        <div ng-show="vm.error" class="text-danger">
+          <strong ng-bind="vm.error"></strong>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</section>
